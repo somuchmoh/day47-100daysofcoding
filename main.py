@@ -10,7 +10,7 @@ header = {
 
 page = requests.get(URL, headers=header).content
 
-soup = BeautifulSoup(page, "lxml")
+soup = BeautifulSoup(page, "html.parser")
 price = soup.find(name="span", class_="price").text
 product = soup.find(name="span", class_="base").text
 
